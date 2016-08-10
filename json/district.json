@@ -1,0 +1,422 @@
+district=[
+  {
+    "governorate": "Anbar",
+    "district": "Al-Ka'im"
+  },
+  {
+    "governorate": "Anbar",
+    "district": "Al-Rutba"
+  },
+  {
+    "governorate": "Anbar",
+    "district": "Ana"
+  },
+  {
+    "governorate": "Anbar",
+    "district": "Falluja"
+  },
+  {
+    "governorate": "Anbar",
+    "district": "Haditha"
+  },
+  {
+    "governorate": "Anbar",
+    "district": "Heet"
+  },
+  {
+    "governorate": "Anbar",
+    "district": "Ramadi"
+  },
+  {
+    "governorate": "Anbar",
+    "district": "Ra'ua"
+  },
+  {
+    "governorate": "Babylon",
+    "district": "Al-Mahawil"
+  },
+  {
+    "governorate": "Babylon",
+    "district": "Al-Musayab"
+  },
+  {
+    "governorate": "Babylon",
+    "district": "Hashimiya"
+  },
+  {
+    "governorate": "Babylon",
+    "district": "Hilla"
+  },
+  {
+    "governorate": "Baghdad",
+    "district": "Abu Ghraib"
+  },
+  {
+    "governorate": "Baghdad",
+    "district": "Adhamia"
+  },
+  {
+    "governorate": "Baghdad",
+    "district": "Al Resafa"
+  },
+  {
+    "governorate": "Baghdad",
+    "district": "Kadhimia"
+  },
+  {
+    "governorate": "Baghdad",
+    "district": "Karkh"
+  },
+  {
+    "governorate": "Baghdad",
+    "district": "Mada'in"
+  },
+  {
+    "governorate": "Baghdad",
+    "district": "Mahmoudiya"
+  },
+  {
+    "governorate": "Baghdad",
+    "district": "Tarmia"
+  },
+  {
+    "governorate": "Baghdad",
+    "district": "Thawra1"
+  },
+  {
+    "governorate": "Baghdad",
+    "district": "Thawra2"
+  },
+  {
+    "governorate": "Basrah",
+    "district": "Abu Al-Khaseeb"
+  },
+  {
+    "governorate": "Basrah",
+    "district": "Al-Midaina"
+  },
+  {
+    "governorate": "Basrah",
+    "district": "Al-Qurna"
+  },
+  {
+    "governorate": "Basrah",
+    "district": "Al-Zubair"
+  },
+  {
+    "governorate": "Basrah",
+    "district": "Basrah"
+  },
+  {
+    "governorate": "Basrah",
+    "district": "Fao"
+  },
+  {
+    "governorate": "Basrah",
+    "district": "Shatt Al-Arab"
+  },
+  {
+    "governorate": "Dahuk",
+    "district": "Amedi"
+  },
+  {
+    "governorate": "Dahuk",
+    "district": "Dahuk"
+  },
+  {
+    "governorate": "Dahuk",
+    "district": "Sumel"
+  },
+  {
+    "governorate": "Dahuk",
+    "district": "Zakho"
+  },
+  {
+    "governorate": "Diyala",
+    "district": "Al-Khalis"
+  },
+  {
+    "governorate": "Diyala",
+    "district": "Al-Muqdadiya"
+  },
+  {
+    "governorate": "Diyala",
+    "district": "Baladrooz"
+  },
+  {
+    "governorate": "Diyala",
+    "district": "Ba'quba"
+  },
+  {
+    "governorate": "Diyala",
+    "district": "Khanaqin"
+  },
+  {
+    "governorate": "Diyala",
+    "district": "Kifri"
+  },
+  {
+    "governorate": "Erbil",
+    "district": "Choman"
+  },
+  {
+    "governorate": "Erbil",
+    "district": "Erbil"
+  },
+  {
+    "governorate": "Erbil",
+    "district": "Koisnjaq"
+  },
+  {
+    "governorate": "Erbil",
+    "district": "Makhmur"
+  },
+  {
+    "governorate": "Erbil",
+    "district": "Mergasur"
+  },
+  {
+    "governorate": "Erbil",
+    "district": "Shaqlawa"
+  },
+  {
+    "governorate": "Erbil",
+    "district": "Soran"
+  },
+  {
+    "governorate": "Kerbala",
+    "district": "Ain Al-Tamur"
+  },
+  {
+    "governorate": "Kerbala",
+    "district": "Al-Hindiya"
+  },
+  {
+    "governorate": "Kerbala",
+    "district": "Kerbala"
+  },
+  {
+    "governorate": "Kirkuk",
+    "district": "Al-Hawiga"
+  },
+  {
+    "governorate": "Kirkuk",
+    "district": "Dabes"
+  },
+  {
+    "governorate": "Kirkuk",
+    "district": "Daquq"
+  },
+  {
+    "governorate": "Kirkuk",
+    "district": "Kirkuk"
+  },
+  {
+    "governorate": "Missan",
+    "district": "Ali Al-Gharbi"
+  },
+  {
+    "governorate": "Missan",
+    "district": "Al-Kahla"
+  },
+  {
+    "governorate": "Missan",
+    "district": "Al-Maimouna"
+  },
+  {
+    "governorate": "Missan",
+    "district": "Al-Mejar Al-Kabir"
+  },
+  {
+    "governorate": "Missan",
+    "district": "Amara"
+  },
+  {
+    "governorate": "Missan",
+    "district": "Qal'at Saleh"
+  },
+  {
+    "governorate": "Muthanna",
+    "district": "Al-Khidhir"
+  },
+  {
+    "governorate": "Muthanna",
+    "district": "Al-Rumaitha"
+  },
+  {
+    "governorate": "Muthanna",
+    "district": "Al-Samawa"
+  },
+  {
+    "governorate": "Najaf",
+    "district": "Al-Manathera"
+  },
+  {
+    "governorate": "Najaf",
+    "district": "Kufa"
+  },
+  {
+    "governorate": "Najaf",
+    "district": "Najaf"
+  },
+  {
+    "governorate": "Ninewa",
+    "district": "Akre"
+  },
+  {
+    "governorate": "Ninewa",
+    "district": "Al-Hamdaniya"
+  },
+  {
+    "governorate": "Ninewa",
+    "district": "Al-Shikhan"
+  },
+  {
+    "governorate": "Ninewa",
+    "district": "Hatra"
+  },
+  {
+    "governorate": "Ninewa",
+    "district": "Mosul"
+  },
+  {
+    "governorate": "Ninewa",
+    "district": "Sinjar"
+  },
+  {
+    "governorate": "Ninewa",
+    "district": "Telafar"
+  },
+  {
+    "governorate": "Ninewa",
+    "district": "Tilkaif"
+  },
+  {
+    "governorate": "Qadissiya",
+    "district": "Afaq"
+  },
+  {
+    "governorate": "Qadissiya",
+    "district": "Al-Shamiya"
+  },
+  {
+    "governorate": "Qadissiya",
+    "district": "Diwaniya"
+  },
+  {
+    "governorate": "Qadissiya",
+    "district": "Hamza"
+  },
+  {
+    "governorate": "Salah al-Din",
+    "district": "Al-Fares"
+  },
+  {
+    "governorate": "Salah al-Din",
+    "district": "Al-Shirqat"
+  },
+  {
+    "governorate": "Salah al-Din",
+    "district": "Baiji"
+  },
+  {
+    "governorate": "Salah al-Din",
+    "district": "Balad"
+  },
+  {
+    "governorate": "Salah al-Din",
+    "district": "Samarra"
+  },
+  {
+    "governorate": "Salah al-Din",
+    "district": "Tikrit"
+  },
+  {
+    "governorate": "Salah al-Din",
+    "district": "Tooz"
+  },
+  {
+    "governorate": "Sulaymaniyah",
+    "district": "Chamchamal"
+  },
+  {
+    "governorate": "Sulaymaniyah",
+    "district": "Darbandikhan"
+  },
+  {
+    "governorate": "Sulaymaniyah",
+    "district": "Dokan"
+  },
+  {
+    "governorate": "Sulaymaniyah",
+    "district": "Halabja"
+  },
+  {
+    "governorate": "Sulaymaniyah",
+    "district": "Kalar"
+  },
+  {
+    "governorate": "Sulaymaniyah",
+    "district": "Penjwin"
+  },
+  {
+    "governorate": "Sulaymaniyah",
+    "district": "Pshdar"
+  },
+  {
+    "governorate": "Sulaymaniyah",
+    "district": "Rania"
+  },
+  {
+    "governorate": "Sulaymaniyah",
+    "district": "Sharbazher"
+  },
+  {
+    "governorate": "Sulaymaniyah",
+    "district": "Sulaymaniya"
+  },
+  {
+    "governorate": "Thi-Qar",
+    "district": "Al-Chibayish"
+  },
+  {
+    "governorate": "Thi-Qar",
+    "district": "Al-Rifa'i"
+  },
+  {
+    "governorate": "Thi-Qar",
+    "district": "Al-Shatra"
+  },
+  {
+    "governorate": "Thi-Qar",
+    "district": "Nassriya"
+  },
+  {
+    "governorate": "Thi-Qar",
+    "district": "Suq Al-Shoyokh"
+  },
+  {
+    "governorate": "Wassit",
+    "district": "Al-Azezia"
+  },
+  {
+    "governorate": "Wassit",
+    "district": "Al-Hai"
+  },
+  {
+    "governorate": "Wassit",
+    "district": "Al-Na'maniya"
+  },
+  {
+    "governorate": "Wassit",
+    "district": "Al-Suwaira"
+  },
+  {
+    "governorate": "Wassit",
+    "district": "Badra"
+  },
+  {
+    "governorate": "Wassit",
+    "district": "Kut"
+  }
+]

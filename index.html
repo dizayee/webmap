@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="images/logo_blue.png" size="30x32">
+
+
+    <title>IOM IRAQ- DTM</title>
+
+
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/fullmap-template.css" rel="stylesheet">
+
+    <!-- Bootstrap-map-js -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//js.arcgis.com/3.13/esri/css/esri.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrapmap.css">
+
+    <!-- Load Leaflet from CDN-->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/leaflet/0.7.3/leaflet.css" />
+    <script src="//cdn.jsdelivr.net/leaflet/0.7.3/leaflet.js"></script>
+
+    <!-- Load Leaflet.markercluster-->
+    <link rel="stylesheet" href="../DTM_Map/src/MarkerCluster.css" />
+    <link rel="stylesheet" href="../DTM_Map/src/MarkerCluster.Default.css" />
+    <script src="../DTM_Map/src/leaflet.markercluster-src.js"></script>
+
+    <!--Leaflet Heat -->
+
+    <script src="js/leaflet-heat.js"></script>
+    <!-- Load Esri Leaflet from CDN -->
+    <script src="//cdn.jsdelivr.net/leaflet.esri/1.0.0/esri-leaflet.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/map_style.css">
+
+
+    <!-- Include the plugin's CSS and JS: Dropdown -->
+    <link rel="stylesheet" href="css/bootstrap-multiselect.css" type="text/css" />
+    <script type="text/javascript" src="js/bootstrap-multiselect.js"></script>
+
+    <script type='text/javascript' src='json/district.json'></script>
+    <script type='text/javascript' src='http://harvesthq.github.io/chosen/chosen.jquery.js'></script>
+    <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
+    <!-- loading crossfilter.js-->
+    <script type="text/javascript" src="js/crossfilter.js"></script>
+
+
+
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+<script src="../bootstrap_v3/docs-assets/js/html5shiv.js"></script>
+<script src="../bootstrap_v3/docs-assets/js/respond.min.js"></script>
+<![endif]-->
+    <style type="text/css">
+        body {
+            padding-top: 67px;
+        }
+        .card {
+    background: white;
+    border: 1px solid #c3c6cf;
+    border-radius: 15px;
+    text-align: center;
+    vertical-align: middle;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+    </style>
+</head>
+
+<body>
+   
+    
+           <!--  <div class="col-md-3">
+                <div class="panel-group" id="accordion">
+                    <div class="panel panel-default" style="max-height:66vh;">
+                        <div class="panel-heading">
+                            <h7 class="panel-heading"><a href="#" data-target="#basemaps-panel" data-toggle="collapse" data-parent="#accordion"> Basemaps</a>
+                            </h7>
+                        </div>
+                        <div class="panel-collapse collapse" id="basemaps-panel" style="max-height:60vh; overflow-y: scroll;">
+                            <div class="panel-body">
+
+                                <ul>
+                                    <li>
+                                        <a><img class="basemaps-thumbnail" src="http://www.arcgis.com/sharing/rest/content/items/8b3d38c0819547faa83f7b7aca80bd76/info/thumbnail/light_canvas.jpg"><figcaption style="text-align: center;">Gray</figcaption></a>
+                                    </li>
+                                    <div class="line-separator"></div>
+                                    <li>
+                                        <a><img class="basemaps-thumbnail" src="http://www.arcgis.com/sharing/rest/content/items/1970c1995b8f44749f4b9b6e81b5ba45/info/thumbnail/ago_downloaded.jpg"><figcaption style="text-align: center;">DarkGray</figcaption></a>
+                                    </li>
+                                    <div class="line-separator"></div>
+                                    <li>
+                                        <a><img class="basemaps-thumbnail" src="http://www.arcgis.com/sharing/rest/content/items/a5fef63517cd4a099b437e55713d3d54/info/thumbnail/Imagery.png"><figcaption style="text-align: center;">Imagery</figcaption></a>
+                                    </li>
+                                    <div class="line-separator"></div>
+                                    <li>
+                                        <a><img class="basemaps-thumbnail" src="http://www.arcgis.com/sharing/rest/content/items/30e5fe3149c34df1ba922e6f5bbf808f/info/thumbnail/ago_downloaded.jpg"><figcaption style="text-align: center;">Topographic</figcaption></a>
+                                    </li>
+                                    <div class="line-separator"></div>
+                                    <li>
+                                        <a><img class="basemaps-thumbnail" src="http://www.arcgis.com/sharing/rest/content/items/3b93337983e9436f8db950e38a8629af/info/thumbnail/ago_downloaded.jpg"><figcaption style="text-align: center;">Streets</figcaption></a>
+                                    </li>
+                                    <div class="line-separator"></div>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default" style="max-height:66vh;">
+                        <div class="panel-heading">
+                            <h7 class="panel-heading"><a href="#layers-panel"  data-toggle="collapse" data-parent="#accordion"> Layers</a>
+                            </h7>
+                        </div>
+                        <div class="panel-collapse collapse in" id="layers-panel">
+                            <div class="panel-body" style="max-height:66vh;">
+                               <div class="checkboxFive">
+                              
+                                    <input type="checkbox"  name="layers[]" id="admin1" value="admin1"/><label for="admin1"><h5>Governorate</h5></label>
+                                    <br>
+                                     <input type="checkbox"  name="layers[]" id="admin2" value="admin2"/><label for="admin2"><h5>District</h5></label>
+                                     <br>
+                                     <input type="checkbox"  name="layers[]" id="cluster" value="cluster"/><label for="cluster"><h5>Clustering</h5></label>
+                                        <br>
+                                     <input type="checkbox"  name="layers[]" id="heatmap" value="heatmap"/><label for="heatmap"><h5>Heatmap</h5></label>
+                                      <br>
+                                     <input type="checkbox"  name="layers[]" id="choropleth" value="choropleth"/><label for="choropleth"><h5>Choropleth</h5></label>
+                                    
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default" style="max-height:60vh;">
+                        <div class="panel-heading">
+                            <h7 class="panel-heading"><a href="#governorate" data-toggle="collapse" data-parent="#accordion"> Filters</a>
+                            </h7>
+                        </div>
+                        <div id="governorate" class="panel-collapse collapse">
+                            <div class="panel-body" id="governorate" style="height:66vh;">
+
+                                <div id="list1" class="dropdown-check-list" tabindex="100">
+                                    <span class="anchor">Governorates</span>
+                                    <br>
+                                    <select id="governorate-select" multiple="multiple">
+                                        <option value="Anbar">Anbar</option>
+                                        <option value="Babylon">Babylon</option>
+                                        <option value="Baghdad">Baghdad</option>
+                                        <option value="Basrah">Basrah</option>
+                                        <option value="Dahuk">Dahuk</option>
+                                        <option value="Diyala">Diyala</option>
+                                        <option value="Erbil">Erbil</option>
+                                        <option value="Kerbala">Kerbala</option>
+                                        <option value="Kirkuk">Kirkuk</option>
+                                        <option value="Missan">Missan</option>
+                                        <option value="Muthanna">Muthanna</option>
+                                        <option value="Najaf">Najaf</option>
+                                        <option value="Ninewa">Ninewa</option>
+                                        <option value="Qadissiya">Qadissiya</option>
+                                        <option value="Salah al-Din">Salah al-Din</option>
+                                        <option value="Sulaymaniyah">Sulaymaniyah</option>
+                                        <option value="Thi-Qar">Thi-Qar</option>
+                                        <option value="Wassit">Wassit</option>
+                                    </select>
+                                </div>
+
+                                <br>
+
+                                <div id="list2" class="dropdown-check-list" tabindex="100">
+                                    <span class="anchor">Districts</span>
+                                    <br>
+                                    <select id="district-select" multiple="multiple">
+                                    </select>
+                                </div>
+                                <br>
+                                <div id="list3" class="dropdown-check-list" tabindex="100">
+                                    <span class="anchor">Shelter Arrangements</span>
+                                    <br>
+                                    <select id="shelter-select" multiple="multiple">
+                                        <option value="Camps">Camps</option>
+                                        <option value="Critical shelter">Critical shelter</option>
+                                        <option value="Private settings">Private settings</option>
+                                        <option value="Unknow">Unknow</option>
+                                    </select>
+                                </div>
+                                <br>
+                                <button type="button" class="btn btn-primary" id="btnFind" onclick="filterData">Find</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default" style="max-height:66vh;">
+                        <div class="panel-heading">
+                            <h7 class="panel-heading"><a href="#" data-target="#legend-panel" data-toggle="collapse" data-parent="#accordion"> Legend</a>
+                            </h7>
+                        </div>
+                        <div class="panel-collapse collapse" id="legend-panel" style="max-height:60vh; overflow-y: scroll;">
+                            <div class="panel-body">
+
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+           
+                <div id="map"></div>
+                <!-- <img alt="Bootstrap Image Preview" src="http://lorempixel.com/140/140/"> -->
+           
+        
+    <!-- <div id="DTMmap"></div> -->
+
+
+
+
+    <script type='text/javascript' src='json/convertcsv.json'></script>
+    <script type="text/javascript" src="js/map.js"></script>
+
+    <!-- Bootstrap core JavaScript
+================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
